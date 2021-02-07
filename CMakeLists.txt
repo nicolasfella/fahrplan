@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.13)
 
 project(Fahrplan)
 
+set(CMAKE_AUTOMOC ON)
+
 find_package(Qt5 REQUIRED COMPONENTS Core Network Xml Quick Concurrent Script)
 find_package(ZLIB)
 
