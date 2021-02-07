@@ -38,7 +38,11 @@ add_executable(fahrplan2
     src/parser/parser_resrobot.cpp
     src/parser/parser_finland_matka.cpp
     src/models/backends.cpp
+    
     3rdparty/gauss-kruger-cpp/gausskruger.cpp
+    
+    3rdparty/qcustomnetworkreply/qcustomnetworkreply.cpp
+    3rdparty/QtCUrl/QtCUrl.cpp
 )
 
 target_include_directories(fahrplan2 PRIVATE ${CMAKE_SOURCE_DIR}/src)
