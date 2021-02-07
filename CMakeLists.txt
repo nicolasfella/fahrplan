@@ -38,15 +38,15 @@ add_executable(fahrplan2
     src/parser/parser_resrobot.cpp
     src/parser/parser_finland_matka.cpp
     src/models/backends.cpp
-    
+
     3rdparty/gauss-kruger-cpp/gausskruger.cpp
-    
+
     3rdparty/qcustomnetworkreply/qcustomnetworkreply.cpp
     3rdparty/QtCUrl/QtCUrl.cpp
 )
 
 target_include_directories(fahrplan2 PRIVATE ${CMAKE_SOURCE_DIR}/src)
 
-target_compile_definitions(fahrplan2 PRIVATE FAHRPLAN_SETTINGS_NAMESPACE="fp" FAHRPLAN_VERSION="1")
+target_compile_definitions(fahrplan2 PRIVATE BUILD_FOR_UBUNTU FAHRPLAN_SETTINGS_NAMESPACE="fp" FAHRPLAN_VERSION="1")
 
 target_link_libraries(fahrplan2 Qt5::Core Qt5::Network Qt5::Xml)
