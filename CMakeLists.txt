@@ -45,7 +45,7 @@ add_executable(fahrplan2
     3rdparty/QtCUrl/QtCUrl.cpp
 )
 
-target_include_directories(fahrplan2 PRIVATE ${CMAKE_SOURCE_DIR}/src)
+target_include_directories(fahrplan2 PRIVATE ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/src)
 
 target_compile_definitions(fahrplan2 PRIVATE BUILD_FOR_UBUNTU FAHRPLAN_SETTINGS_NAMESPACE="fp" FAHRPLAN_VERSION="1")
 
