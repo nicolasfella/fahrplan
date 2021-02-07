@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(Fahrplan)
 
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
 
 find_package(Qt5 REQUIRED COMPONENTS Core Network Xml Quick Concurrent Script)
 find_package(ZLIB)
@@ -49,6 +50,7 @@ add_executable(fahrplan2
 
     3rdparty/qcustomnetworkreply/qcustomnetworkreply.cpp
     3rdparty/QtCUrl/QtCUrl.cpp
+    ubuntu_res.qrc
 )
 
 target_include_directories(fahrplan2 PRIVATE ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/src)
