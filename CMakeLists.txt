@@ -8,6 +8,8 @@ find_package(Qt5 REQUIRED COMPONENTS Core Network Xml Quick Concurrent Script)
 find_package(ZLIB)
 find_package(CURL)
 
+include(GNUInstallDirs)
+
 add_executable(fahrplan2
     src/main.cpp
     src/parser/parser_hafasxml.cpp
@@ -55,4 +57,4 @@ target_compile_definitions(fahrplan2 PRIVATE BUILD_FOR_QT5 BUILD_FOR_UBUNTU FAHR
 
 target_link_libraries(fahrplan2 Qt5::Core Qt5::Gui Qt5::Network Qt5::Xml Qt5::Concurrent Qt5::Quick Qt5::Script ZLIB::ZLIB CURL::libcurl)
 
-install(PROGRAMS fahrplan2 ${CMAKE_INSTALL_BINDIR} )
+install(PROGRAMS fahrplan2 DESTINATION ${CMAKE_INSTALL_BINDIR} )
