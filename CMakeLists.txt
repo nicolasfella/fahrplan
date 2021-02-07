@@ -47,6 +47,6 @@ add_executable(fahrplan2
 
 target_include_directories(fahrplan2 PRIVATE ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/src)
 
-target_compile_definitions(fahrplan2 PRIVATE BUILD_FOR_UBUNTU FAHRPLAN_SETTINGS_NAMESPACE="fp" FAHRPLAN_VERSION="1")
+target_compile_definitions(fahrplan2 PRIVATE BUILD_FOR_QT5 BUILD_FOR_UBUNTU FAHRPLAN_SETTINGS_NAMESPACE="fp" FAHRPLAN_VERSION="1")
 
 target_link_libraries(fahrplan2 Qt5::Core Qt5::Gui Qt5::Network Qt5::Xml Qt5::Concurrent Qt5::Quick Qt5::Script)
