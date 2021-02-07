@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(Fahrplan)
 
 find_package(Qt5 REQUIRED COMPONENTS Core Network Xml Quick Concurrent Script)
+find_package(ZLIB)
 
 add_executable(fahrplan2
     src/main.cpp
@@ -49,4 +50,4 @@ target_include_directories(fahrplan2 PRIVATE ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_
 
 target_compile_definitions(fahrplan2 PRIVATE BUILD_FOR_QT5 BUILD_FOR_UBUNTU FAHRPLAN_SETTINGS_NAMESPACE="fp" FAHRPLAN_VERSION="1")
 
-target_link_libraries(fahrplan2 Qt5::Core Qt5::Gui Qt5::Network Qt5::Xml Qt5::Concurrent Qt5::Quick Qt5::Script)
+target_link_libraries(fahrplan2 Qt5::Core Qt5::Gui Qt5::Network Qt5::Xml Qt5::Concurrent Qt5::Quick Qt5::Script ZLIB::ZLIB)
